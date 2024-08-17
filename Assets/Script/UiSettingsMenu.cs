@@ -5,7 +5,14 @@ using UnityEngine.UI;
 public class UiSettingsMenu : MonoBehaviour
 {
     [SerializeField] private Button backButton;
+    [SerializeField] private Button close1Button;
+    [SerializeField] private Button close2Button;
+    [SerializeField] private Button controllerButton1;
+    [SerializeField] private Button controllerButton2;
     [SerializeField] private GameObject referencePanel;
+    [SerializeField] private GameObject controllerPanel;
+    [SerializeField] private GameObject subController1Panel;
+    [SerializeField] private GameObject subController2Panel;
     [SerializeField] private GameObject pausePanel;
     [SerializeField] private Slider towerSlide1;
     [SerializeField] private Slider bodySlide1;
@@ -37,6 +44,8 @@ public class UiSettingsMenu : MonoBehaviour
     private void Awake()
     {
         backButton.onClick.AddListener(OnBackButtonClicked);
+        controllerButton1.onClick.AddListener(OnControllerButtonClicked1);
+        controllerButton2.onClick.AddListener(OnControllerButtonClicked2);
         towerSlide1.onValueChanged.AddListener(OnSlide1Change);
         bodySlide1.onValueChanged.AddListener(OnSlide1Change);
         canonSlide1.onValueChanged.AddListener(OnSlide1Change);
@@ -62,6 +71,8 @@ public class UiSettingsMenu : MonoBehaviour
     private void OnDestroy()
     {
         backButton.onClick.RemoveAllListeners();
+        controllerButton1.onClick.RemoveAllListeners();
+        controllerButton2.onClick.RemoveAllListeners();
         towerSlide1.onValueChanged.RemoveAllListeners();
         bodySlide1.onValueChanged.RemoveAllListeners();
         canonSlide1.onValueChanged.RemoveAllListeners();
@@ -126,5 +137,28 @@ public class UiSettingsMenu : MonoBehaviour
 
         Debug.Log("OnSlide1Change");
         
+    }
+    private void OnControllerButtonClicked1()
+    {
+        controllerPanel.SetActive(true);
+        subController1Panel.SetActive(true);
+        subController2Panel.SetActive(false);
+        close1Button.gameObject.SetActive(true);
+        close2Button.gameObject.SetActive(false);
+
+
+
+        Debug.Log("OnControllerButtonClicked1");
+    }
+    private void OnControllerButtonClicked2()
+    {
+        
+        controllerPanel.SetActive(true);
+        subController1Panel.SetActive(false);
+        subController2Panel.SetActive(true);
+        close1Button.gameObject.SetActive(false);
+        close2Button.gameObject.SetActive(true);
+
+        Debug.Log("OnControllerButtonClicked2");
     }
 }
