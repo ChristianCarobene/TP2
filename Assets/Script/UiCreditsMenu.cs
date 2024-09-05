@@ -6,8 +6,6 @@ public class UiCreditsMenu : MonoBehaviour
     [SerializeField] private Button backButton;
     [SerializeField] private GameObject referencePanel;
     [SerializeField] private GameObject pausePanel;
-    [SerializeField] private Movement player1;
-    [SerializeField] private Movement player2;
 
 
     private void Awake()

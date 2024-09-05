@@ -13,9 +13,9 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
-  - 
+  - Fondo
+  - Escenario
+  - personajes
   - 
   - 
   - 
@@ -42,4 +42,13 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Fondo
+    uniqueID: 3547128729
+    locked: 0
+  - name: Escenario
+    uniqueID: 2052400629
+    locked: 0
+  - name: Personaje
+    uniqueID: 2857844225
     locked: 0

@@ -38,6 +38,8 @@ public class UiSettingsMenu : MonoBehaviour
     [SerializeField] private Movement player2;
     [SerializeField] private UiTank tankUi1;
     [SerializeField] private UiTank tankUi2;
+    [SerializeField] private Play_RendSkin rendPlayer1;
+    [SerializeField] private Play_RendSkin rendPlayer2;
 
 
 
@@ -95,16 +97,20 @@ public class UiSettingsMenu : MonoBehaviour
     }
     private void OnSlide1Change(float newValue)
     {
-        player1.typeCanon = (int)canonSlide1.value;
-        player1.typeBody = (int)bodySlide1.value;
-        player1.typeTower = (int)towerSlide1.value;
-        player1.typeTrucks = (int)trucksSlide1.value;
+        rendPlayer1.typeCanon = (int)canonSlide1.value;
+        rendPlayer1.typeBody = (int)bodySlide1.value;
+        rendPlayer1.typeTower = (int)towerSlide1.value;
+        rendPlayer1.typeTrucks = (int)trucksSlide1.value;
         canonTMP1.text = canonSlide1.value.ToString();
         bodyTMP1.text = bodySlide1.value.ToString();
         towerTMP1.text = towerSlide1.value.ToString();
         trucksTMP1.text = trucksSlide1.value.ToString();
         speedTMP1.text = (speedSlide1.value * 100).ToString("000") ;
-        player1.UpdateSpeed(speedSlide1.value);
+        player1.SetSpeed(speedSlide1.value);
+        rendPlayer1.SetSkinCanon();
+        rendPlayer1.SetSkinTower();
+        rendPlayer1.SetSkinBody();
+        rendPlayer1.SetSkinTrucks();
         
         tankUi1.typeBody = (int)bodySlide1.value;
         tankUi1.typeTower =(int)towerSlide1.value;
@@ -113,17 +119,21 @@ public class UiSettingsMenu : MonoBehaviour
         tankUi1.UpdateImg();
 
 
-       
-        player2.typeCanon = (int)canonSlide2.value;
-        player2.typeBody = (int)bodySlide2.value;
-        player2.typeTower = (int)towerSlide2.value;
-        player2.typeTrucks = (int)trucksSlide2.value;
+
+        rendPlayer2.typeCanon = (int)canonSlide2.value;
+        rendPlayer2.typeBody = (int)bodySlide2.value;
+        rendPlayer2.typeTower = (int)towerSlide2.value;
+        rendPlayer2.typeTrucks = (int)trucksSlide2.value;
         canonTMP2.text = canonSlide2.value.ToString();
         bodyTMP2.text = bodySlide2.value.ToString();
         towerTMP2.text = towerSlide2.value.ToString();
         trucksTMP2.text = trucksSlide2.value.ToString();
         speedTMP2.text = (speedSlide2.value * 100).ToString("000");
-        player2.UpdateSpeed(speedSlide2.value);
+        player2.SetSpeed(speedSlide2.value);
+        rendPlayer2.SetSkinCanon();
+        rendPlayer2.SetSkinTower();
+        rendPlayer2.SetSkinBody();
+        rendPlayer2.SetSkinTrucks();
 
         tankUi2.typeBody = (int)bodySlide2.value;
         tankUi2.typeTower = (int)towerSlide2.value;

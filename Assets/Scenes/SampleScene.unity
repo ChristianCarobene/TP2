@@ -287,14 +287,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 0.01
   isPause: 1
-  rotation: 10
   keyUp: 119
   keyDown: 115
   keyLeft: 97
   keyRight: 100
-  keyRotateRight: 101
-  keyRotateLeft: 113
-  keyColorRand: 114
   rendTower: {fileID: 528203781}
   rendCanon: {fileID: 1683942913}
   rendBody: {fileID: 1321752170}
@@ -315,10 +311,6 @@ MonoBehaviour:
   trucksB: {fileID: 21300000, guid: b013e572a670dc942b2049175cd4f04c, type: 3}
   trucksC: {fileID: 21300000, guid: e383d864f3550ea48bf98b09387ad4ae, type: 3}
   trucksD: {fileID: 21300000, guid: c3eb6e38c93d6a34a9236fcc8677f840, type: 3}
-  typeBody: 1
-  typeCanon: 1
-  typeTower: 1
-  typeTrucks: 1
 --- !u!4 &43642401
 Transform:
   m_ObjectHideFlags: 0
@@ -1410,14 +1402,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 0.01
   isPause: 1
-  rotation: 10
   keyUp: 273
   keyDown: 274
   keyLeft: 276
   keyRight: 275
-  keyRotateRight: 127
-  keyRotateLeft: 281
-  keyColorRand: 279
   rendTower: {fileID: 946319354}
   rendCanon: {fileID: 1514013900}
   rendBody: {fileID: 2103177457}
@@ -1438,10 +1426,6 @@ MonoBehaviour:
   trucksB: {fileID: 21300000, guid: b013e572a670dc942b2049175cd4f04c, type: 3}
   trucksC: {fileID: 21300000, guid: e383d864f3550ea48bf98b09387ad4ae, type: 3}
   trucksD: {fileID: 21300000, guid: c3eb6e38c93d6a34a9236fcc8677f840, type: 3}
-  typeBody: 1
-  typeCanon: 1
-  typeTower: 1
-  typeTrucks: 1
 --- !u!4 &172069417
 Transform:
   m_ObjectHideFlags: 0
@@ -7172,7 +7156,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.21342114, g: 0.24182585, b: 0.41509432, a: 0.27450982}
+  m_Color: {r: 0.21342114, g: 0.24182585, b: 0.41509432, a: 0.8352941}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -14880,6 +14864,8 @@ MonoBehaviour:
   player2: {fileID: 172069415}
   tankUi1: {fileID: 1294972836}
   tankUi2: {fileID: 669361516}
+  rendPlayer1: {fileID: 0}
+  rendPlayer2: {fileID: 0}
 --- !u!1 &1546207377
 GameObject:
   m_ObjectHideFlags: 0
@@ -18605,10 +18591,10 @@ RectTransform:
   m_Father: {fileID: 395698835}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1080, y: 720}
-  m_Pivot: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1950549876
 MonoBehaviour:
   m_ObjectHideFlags: 0
