@@ -11,7 +11,7 @@ public class Movement : MonoBehaviour
     [Header("Variables Publicas")]
     public float speed = 0.01f;
     public bool isPause = false;
-    private new Rigidbody2D rigidbody;
+    private Rigidbody2D rigidbody;
     private Vector3 pos;
     private Vector3 startPos;
     private Vector3 velocity;
@@ -38,7 +38,7 @@ public class Movement : MonoBehaviour
     {
         Move(); 
     }
-    /*private void Move()
+    private void Move()
     {
         if (Input.GetKey(keyUp))
         {
@@ -50,8 +50,8 @@ public class Movement : MonoBehaviour
         if (Input.GetKey(keyDown))
         {
             //rigidbody.velocity = new Vector2(0, -speed * Time.fixedDeltaTime);
-            rigidbody.AddForce(new Vector3(0, speed * -1, 0), ForceMode2D.Impulse);
-            // rigidbody.AddForce(new Vector3(0, speed * -1, 0), ForceMode2D.Force);
+            //rigidbody.AddForce(new Vector3(0, speed * -1, 0), ForceMode2D.Impulse);
+            rigidbody.AddForce(new Vector3(0, speed * -1 * Time.fixedDeltaTime, 0), ForceMode2D.Force);
 
         }
         if (Input.GetKeyUp(keyUp))
@@ -63,26 +63,11 @@ public class Movement : MonoBehaviour
         if (Input.GetKeyUp(keyDown))
         {
             //rigidbody.velocity = new Vector2(0, 0);
-            rigidbody.AddForce(new Vector3(0, speed * -1, 0), ForceMode2D.Impulse);
-            // rigidbody.AddForce(new Vector3(0, speed * -1, 0), ForceMode2D.Force);
+            //rigidbody.AddForce(new Vector3(0, speed * -1, 0), ForceMode2D.Impulse);
+             rigidbody.AddForce(new Vector3(0, speed * -1  * Time.fixedDeltaTime, 0), ForceMode2D.Force);
 
         }
-    }*/
-    private void Move()
-        {
-            if (Input.GetKey(keyUp))
-            {
-               rigidbody.AddForce(new Vector2(0, speed), ForceMode2D.Impulse);
-               //rigidbody.AddForce(new Vector3(0, speed, 0), ForceMode2D.Force);
-
-            }
-            if (Input.GetKey(keyDown))
-            {
-                rigidbody.AddForce(new Vector3(0, -speed, 0), ForceMode2D.Impulse);
-                // rigidbody.AddForce(new Vector3(0, speed * -1, 0), ForceMode2D.Force);
-
-            }
-        }
+    }
     public void SetSpeed(float newSpeed)
     {
         if (newSpeed <= 1)

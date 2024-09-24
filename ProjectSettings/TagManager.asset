@@ -13,14 +13,14 @@ TagManager:
   - 
   - Water
   - UI
-  - Fondo
+  - 
   - Escenario
-  - personajes
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Personajes
+  - Fondo
+  - GUI
+  - Ball
+  - Power UP
+  - Obstacle
   - 
   - 
   - 
@@ -51,4 +51,7 @@ TagManager:
     locked: 0
   - name: Personaje
     uniqueID: 2857844225
+    locked: 0
+  - name: GUI
+    uniqueID: 3293023687
     locked: 0

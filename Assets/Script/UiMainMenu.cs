@@ -41,6 +41,7 @@ public class UiMainMenu : MonoBehaviour
             player1.isPause = !player1.isPause;
             player2.isPause = !player2.isPause;
             ball.isPause = !ball.isPause;
+
         }
     }
 
